@@ -34,6 +34,7 @@ while running:
     # -------------------------------------------------------------
     # font.render(텍스트내용, 부드럽게하기여부, 검은색RGB)
     score_surface = game_font.render(f"Score: {score}", True, (0, 0, 0))
+    screen.blit(score_surface, (10, 10))
 
     for event in pygame.event.get():
         if event.type == pygame.QUIT: running = False
