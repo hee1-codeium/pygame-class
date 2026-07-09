@@ -18,11 +18,11 @@ try:
 
     cactus_image = pygame.image.load("cactus.png")
     cactus_image = pygame.transform.scale(cactus_image, (40, 50))
-    print("🎉 이미지 로드 성공! 캐릭터로 게임을 시작합니다.")
+    print("이미지 로드 성공! 캐릭터로 게임을 시작합니다.")
 except pygame.error:
     # 폴더에 파일이 없거나 이름이 틀리면 이쪽으로 넘어옵니다.
     # 프로그램이 튕기지 않고, 이미지 변수들은 None 상태를 유지합니다.
-    print("⚠️ 이미지 파일을 찾을 수 없습니다! 기본 사각형으로 대체하여 게임을 실행합니다.")
+    print("이미지 파일을 찾을 수 없습니다! 기본 사각형으로 대체하여 게임을 실행합니다.")
 
 # 오브젝트의 위치와 크기를 담당할 '사각형(Rect)' 생성
 player_rect = pygame.Rect(100, 250, 50, 50)
