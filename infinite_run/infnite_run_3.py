@@ -6,7 +6,6 @@ pygame.init()
 screen = pygame.display.set_mode((800, 400))
 clock = pygame.time.Clock()
 
-# --- [안전한 이미지 로드 및 체크 시스템] ---
 # 처음에는 이미지가 없는 상태(None)로 시작합니다.
 dino_image = None
 cactus_image = None
@@ -43,7 +42,6 @@ while True:
     # 화면 그리기
     screen.fill((255, 255, 255)) 
 
-    # --- [핵심] 이미지가 있으면 이미지로, 없으면 사각형으로 그리기 ---
     # 조건문으로 dino_image가 변수에 잘 담겨있는지(None이 아닌지) 체크합니다.
     if dino_image:
         screen.blit(dino_image, player_rect)   # 공룡 이미지 그리기
