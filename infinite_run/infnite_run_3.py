@@ -11,17 +11,18 @@ dino_image = None
 cactus_image = None
 
 try:
-    # 이미지 로드를 시도합니다. (파일명이나 경로가 맞으면 성공!)
-    dino_image = pygame.image.load("dino.png")
+    # 이미지 로드를 시도합니다. (dino.png 대신 찾아오신 dino_run.gif를 적용합니다!)
+    dino_image = pygame.image.load("./img/dino_run.gif")
     dino_image = pygame.transform.scale(dino_image, (50, 50))
+    print("이미지 로드 성공! 캐릭터로 게임을 시작합니다.")
 
-    cactus_image = pygame.image.load("cactus.png")
+    # 선인장 이미지 로드 (추후 cactus.png 파일이 준비되면 자동으로 적용됩니다)
+    cactus_image = pygame.image.load("./img/cactus.png")
     cactus_image = pygame.transform.scale(cactus_image, (40, 50))
     print("이미지 로드 성공! 캐릭터로 게임을 시작합니다.")
 except: 
     # 폴더에 파일이 없거나 이름이 틀리면 이쪽으로 넘어옵니다.
-    # 프로그램이 튕기지 않고, 이미지 변수들은 None 상태를 유지합니다.
-    print("이미지 파일을 찾을 수 없습니다! 기본 사각형으로 대체하여 게임을 실행합니다.")
+    print("로드에 실패한 이미지가 있습니다..")
 
 # 오브젝트의 위치와 크기를 담당할 '사각형(Rect)' 생성
 player_rect = pygame.Rect(100, 250, 50, 50)
